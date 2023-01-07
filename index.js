@@ -1,6 +1,13 @@
-function formatMinsAndSeconds(time) {
+function formatTime(time) {
     if (time < 10) {
         time = "0" + time
+    }
+    return time
+}
+
+function formatHours(time) {
+    if (time > 12) {
+        time = time - 12
     }
     return time
 }
@@ -28,9 +35,9 @@ function setDate() {
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`
 
     // digital.textContent = (`${hours} : ${mins} : ${seconds}`)
-    digitalHour.textContent = hours
-    digitalMin.textContent = formatMinsAndSeconds(mins)
-    digitalSec.textContent = formatMinsAndSeconds(seconds)
+    digitalHour.textContent = formatTime(formatHours(hours))
+    digitalMin.textContent = formatTime(mins)
+    digitalSec.textContent = formatTime(seconds)
 }
 
 setInterval(setDate, 1000); // 1000 milliseconds = 1 second
