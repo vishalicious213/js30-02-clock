@@ -19,3 +19,5 @@ From Wes Bos' [JavaScript30](https://javascript30.com/) exercises. Gets current 
 - transition
 - transition-timing-function: cubic-bezier()
 - transform: translateY()
+
+Deployed at: https://vish213-clock.netlify.app/
