@@ -43,4 +43,6 @@ html {
     background: black;
     position: absolute;
     top: 50%;
+    transform-origin: 100%; /* make the hand rotate from the end of the x-axis, not from the default center (50%) */
+    transform: rotate(90deg) /* divs are rendered horizontally, rotate it so its vertical, in the 12:00 position */
   }
