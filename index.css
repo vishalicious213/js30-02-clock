@@ -44,5 +44,7 @@ html {
     position: absolute;
     top: 50%;
     transform-origin: 100%; /* make the hand rotate from the end of the x-axis, not from the default center (50%) */
-    transform: rotate(90deg) /* divs are rendered horizontally, rotate it so its vertical, in the 12:00 position */
+    transform: rotate(90deg); /* divs are rendered horizontally, rotate it so its vertical, in the 12:00 position */
+    transition: all 0.05; /* add a short delay in animation, so its not instant */
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); /* make the hand jump past the correct place and snap back, like a wobble */
   }
