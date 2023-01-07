@@ -2,6 +2,7 @@ function setDate() {
     const secondHand = document.querySelector(".second-hand")
     const minsHand = document.querySelector(".min-hand")
     const hourHand = document.querySelector(".hour-hand")
+    const digital = document.querySelector("#digital")
     const now = new Date()
 
     const seconds = now.getSeconds()
@@ -16,7 +17,7 @@ function setDate() {
     const hoursDegrees = (hours / 12) * 360 - 90
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`
 
-    console.log(`${hours} : ${mins} : ${seconds}`)
+    digital.textContent = (`${hours} : ${mins} : ${seconds}`)
 }
 
 setInterval(setDate, 1000); // 1000 milliseconds = 1 second
