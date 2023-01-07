@@ -1,8 +1,18 @@
+function formatMinsAndSeconds(time) {
+    if (time < 10) {
+        time = "0" + time
+    }
+    return time
+}
+
 function setDate() {
     const secondHand = document.querySelector(".second-hand")
     const minsHand = document.querySelector(".min-hand")
     const hourHand = document.querySelector(".hour-hand")
-    const digital = document.querySelector("#digital")
+    // const digital = document.querySelector("#digital")
+    const digitalSec = document.querySelector("#digital-sec")
+    const digitalMin = document.querySelector("#digital-min")
+    const digitalHour = document.querySelector("#digital-hour")
     const now = new Date()
 
     const seconds = now.getSeconds()
@@ -17,7 +27,10 @@ function setDate() {
     const hoursDegrees = (hours / 12) * 360 - 90
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`
 
-    digital.textContent = (`${hours} : ${mins} : ${seconds}`)
+    // digital.textContent = (`${hours} : ${mins} : ${seconds}`)
+    digitalHour.textContent = hours
+    digitalMin.textContent = formatMinsAndSeconds(mins)
+    digitalSec.textContent = formatMinsAndSeconds(seconds)
 }
 
 setInterval(setDate, 1000); // 1000 milliseconds = 1 second

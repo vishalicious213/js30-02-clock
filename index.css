@@ -76,3 +76,13 @@ html {
     width: 20rem;
     padding: .5rem;
   }
+
+  /* #digital-hour {} */
+
+  #digital-min {
+    color: black;
+  }
+
+  #digital-sec {
+    color: red;
+  }
