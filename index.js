@@ -12,6 +12,16 @@ function formatHours(time) {
     return time
 }
 
+function formatCalendarDay(day) {
+    if (day === 0) return "Sun"
+    if (day === 1) return "Mon"
+    if (day === 2) return "Tue"
+    if (day === 3) return "Wed"
+    if (day === 4) return "Thu"
+    if (day === 5) return "Fri"
+    if (day === 6) return "Sat"
+}
+
 function setDate() {
     const secondHand = document.querySelector(".second-hand")
     const minsHand = document.querySelector(".min-hand")
@@ -51,6 +61,11 @@ function setCalendarDate() {
     const screenMonth = document.querySelector("#month")
     const screenDate = document.querySelector("#day")
     const screenYear = document.querySelector("#year")
+
+    screenDay.textContent = formatCalendarDay(day)
+    screenMonth.textContent = month
+    screenDate.textContent = formatTime(date)
+    screenYear.textContent = year
 
     console.log(`Day: ${day} Month: ${month} Date: ${date} Year: ${year}`)
 }
