@@ -40,7 +40,18 @@ function setDate() {
     digitalSec.textContent = formatTime(seconds)
 }
 
-setInterval(setDate, 1000); // 1000 milliseconds = 1 second
+function setCalendarDate() {
+    const now = new Date()
+    const day = now.getDay()
+    const month = now.getMonth()
+    const date = now.getDate()
+    const year = now.getFullYear()
+
+    console.log(`Day: ${day} Month: ${month} Date: ${date} Year: ${year}`)
+}
+
+setInterval(setDate, 1000) // 1000 milliseconds = 1 second
+setCalendarDate()
 
 // secondsDegrees: seconds/60 gives us the fraction or percentage out of 60
 // multipilying it by 360 gives us the number out of the whole (which is the angle, in this case)
