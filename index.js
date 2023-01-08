@@ -47,6 +47,11 @@ function setCalendarDate() {
     const date = now.getDate()
     const year = now.getFullYear()
 
+    const screenDay = document.querySelector("#weekday")
+    const screenMonth = document.querySelector("#month")
+    const screenDate = document.querySelector("#day")
+    const screenYear = document.querySelector("#year")
+
     console.log(`Day: ${day} Month: ${month} Date: ${date} Year: ${year}`)
 }
 
