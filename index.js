@@ -63,6 +63,8 @@ function setDate() {
     digitalHour.textContent = formatTime(formatHours(hours))
     digitalMin.textContent = formatTime(mins)
     digitalSec.textContent = formatTime(seconds)
+
+    setCalendarDate()
 }
 
 function setCalendarDate() {
@@ -82,11 +84,10 @@ function setCalendarDate() {
     screenDate.textContent = formatTime(date)
     screenYear.textContent = year
 
-    console.log(`Day: ${day} Month: ${month} Date: ${date} Year: ${year}`)
+    // console.log(`Day: ${day} Month: ${month} Date: ${date} Year: ${year}`)
 }
 
 setInterval(setDate, 1000) // 1000 milliseconds = 1 second
-setCalendarDate()
 
 // secondsDegrees: seconds/60 gives us the fraction or percentage out of 60
 // multipilying it by 360 gives us the number out of the whole (which is the angle, in this case)
