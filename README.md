@@ -9,6 +9,12 @@ Customized & added on to project with the following:
     - removed transform rotations from css and calculated them using JavaScript
 - changed colors of clock hands
 - added digital clock at bottom
+    - use same time values from analog clock
+    - format each time element and render it
+- added current date at bottom
+    - get new date
+    - separate into day, month, date, year elements
+    - format each date element and render it
 - new background
 
 ## JavaScript concepts
